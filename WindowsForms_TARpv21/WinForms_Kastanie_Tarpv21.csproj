@@ -85,6 +85,9 @@
   <ItemGroup>
     <Content Include="1.wav" />
     <Content Include="2.wav" />
+    <Content Include="21.jpg" />
+    <Content Include="22.jpg" />
+    <Content Include="23.jpg" />
     <Content Include="3.wav" />
     <Content Include="Play.png" />
     <Content Include="shuffle.png" />

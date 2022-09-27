@@ -49,7 +49,7 @@ namespace WindowsForms_TARpv21
             {
                 Image = Image.FromFile(@"..\..\shuffle.png"),
                 Location = new System.Drawing.Point(690, 700),
-                Size = new System.Drawing.Size(50, 50),
+                Size = new System.Drawing.Size(100, 100),
                 BackColor = System.Drawing.Color.White,
                 FlatStyle = FlatStyle.Flat
             };
@@ -59,8 +59,8 @@ namespace WindowsForms_TARpv21
             Button song1 = new Button
             {
                 Location = new System.Drawing.Point(200, 100),
-                Text = string.Format("1"),
-                Size = new System.Drawing.Size(50, 50),
+                Text = string.Format("Play"),
+                Size = new System.Drawing.Size(100, 100),
                 BackColor = System.Drawing.Color.Red,
             };
             song1.Click += Nupp_Click1;
@@ -69,8 +69,8 @@ namespace WindowsForms_TARpv21
             Button song2 = new Button
             {
                 Location = new System.Drawing.Point(200, 175),
-                Text = string.Format("2"),
-                Size = new System.Drawing.Size(50, 50),
+                Text = string.Format("Play"),
+                Size = new System.Drawing.Size(100, 100),
                 BackColor = System.Drawing.Color.Red,
             };
             song2.Click += Nupp_Click2;
@@ -79,12 +79,71 @@ namespace WindowsForms_TARpv21
             Button song3 = new Button
             {
                 Location = new System.Drawing.Point(200, 250),
-                Text = string.Format("3"),
-                Size = new System.Drawing.Size(50, 50),
+                Text = string.Format("Play"),
+                Size = new System.Drawing.Size(100, 100),
                 BackColor = System.Drawing.Color.Red,
             };
-            
             song3.Click += Nupp_Click3;
+
+            Label FailName = new Label();
+
+            if (song1.Enabled == true)
+            {
+                FailName
+                {
+                    Text = string.Format(" - Pumped up kicks"),
+                    Location = new System.Drawing.Point(270, 110),
+                    Size = new System.Drawing.Size(100, 50),
+                    BackColor = System.Drawing.Color.White,
+                };
+                this.Controls.Add(FailName);
+                PictureBox pilt = new PictureBox
+                {
+                    Image = Image.FromFile(@"..\..\21.jpg"),
+                    Location = new Point(300, 300),
+                    Size = new Size(300, 300),
+                    SizeMode = PictureBoxSizeMode.Zoom
+                };
+            }
+            else if (song2.Enabled == true)
+            {
+                Label FailName = new Label
+                {
+                    Text = string.Format(" - MONTERO - LIL NAS"),
+                    Location = new System.Drawing.Point(270, 185),
+                    Size = new System.Drawing.Size(100, 50),
+                    BackColor = System.Drawing.Color.White,
+                };
+                this.Controls.Add(FailName);
+                PictureBox pilt = new PictureBox
+                {
+                    Image = Image.FromFile(@"..\..\23.jpg"),
+                    Location = new Point(300, 300),
+                    Size = new Size(300, 300),
+                    SizeMode = PictureBoxSizeMode.Zoom
+
+                };
+            }
+            else if (song3.Enabled == true)
+            {
+                FailName
+                {
+                    Text = string.Format(" - Life Goes On - Oliver Tree"),
+                    Location = new System.Drawing.Point(270, 185),
+                    Size = new System.Drawing.Size(100, 50),
+                    BackColor = System.Drawing.Color.White,
+                };
+                this.Controls.Add(FailName);
+                PictureBox pilt = new PictureBox
+                {
+                    Image = Image.FromFile(@"..\..\22.jpg"),
+                    Location = new Point(300, 300),
+                    Size = new Size(300, 300),
+                    SizeMode = PictureBoxSizeMode.Zoom
+                };
+            }
+            
+            
 
             this.Controls.Add(song3);
             this.Controls.Add(song2);
@@ -106,14 +165,6 @@ namespace WindowsForms_TARpv21
                 {
                     muusika.Play();
                     MessageBox.Show("Pumped up kicks");
-                    Label FailName = new Label
-                    {
-                        Text = string.Format(" - Pumped up kicks"),
-                        Location = new System.Drawing.Point(270, 110),
-                        Size = new System.Drawing.Size(100, 50),
-                        BackColor = System.Drawing.Color.White,
-                    };
-                    this.Controls.Add(FailName);
                 }           
             }
             else
@@ -132,14 +183,6 @@ namespace WindowsForms_TARpv21
                 {
                     muusika.Play();
                     MessageBox.Show("MONTERO - LIL NAS");
-                    Label FailName = new Label
-                    {
-                        Text = string.Format(" - MONTERO - LIL NAS"),
-                        Location = new System.Drawing.Point(270, 185),
-                        Size = new System.Drawing.Size(100, 50),
-                        BackColor = System.Drawing.Color.White,
-                    };
-                    this.Controls.Add(FailName);
                 }
             }
             else
@@ -158,14 +201,6 @@ namespace WindowsForms_TARpv21
                 {
                     muusika.Play();
                     MessageBox.Show("Life Goes On - Oliver Tree");
-                    Label FailName = new Label
-                    {
-                        Text = string.Format(" - Life Goes On - Oliver Tree"),
-                        Location = new System.Drawing.Point(270, 260),
-                        Size = new System.Drawing.Size(100, 50),
-                        BackColor = System.Drawing.Color.White,
-                    };
-                    this.Controls.Add(FailName);
                 }
             }
             else
