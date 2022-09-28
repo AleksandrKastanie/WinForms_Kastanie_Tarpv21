@@ -32,6 +32,7 @@ namespace WindowsForms_TARpv21
                 FlatStyle = FlatStyle.Flat,
             };
             play.Click += Music_Click;
+           
 
             // Вторая кнопка остановки музыки
             Button stop = new Button
@@ -63,6 +64,22 @@ namespace WindowsForms_TARpv21
                 Size = new System.Drawing.Size(100, 100),
                 BackColor = System.Drawing.Color.Red,
             };
+            Label FailName = new Label
+            {
+                Text = string.Format(" - Pumped up kicks"),
+                Location = new System.Drawing.Point(330, 110),
+                Size = new System.Drawing.Size(100, 50),
+                BackColor = System.Drawing.Color.White,
+            };
+
+            PictureBox pilt = new PictureBox
+            {
+                Image = Image.FromFile(@"..\..\21.jpg"),
+                Location = new Point(700, 200),
+                Size = new Size(300, 300),
+                SizeMode = PictureBoxSizeMode.Zoom
+            };
+
             song1.Click += Nupp_Click1;
 
             // Вторая песня
@@ -73,6 +90,24 @@ namespace WindowsForms_TARpv21
                 Size = new System.Drawing.Size(100, 100),
                 BackColor = System.Drawing.Color.Red,
             };
+
+            Label Claster = new Label
+            {
+                Text = string.Format(" - MONTERO - LIL NAS"),
+                Location = new System.Drawing.Point(330, 185),
+                Size = new System.Drawing.Size(100, 50),
+                BackColor = System.Drawing.Color.White,
+            };
+
+            PictureBox zoomer = new PictureBox
+            {
+                Image = Image.FromFile(@"..\..\23.jpg"),
+                Location = new Point(700, 200),
+                Size = new Size(300, 300),
+                SizeMode = PictureBoxSizeMode.Zoom
+
+            };
+
             song2.Click += Nupp_Click2;
 
             // Третья песня
@@ -83,64 +118,41 @@ namespace WindowsForms_TARpv21
                 Size = new System.Drawing.Size(100, 100),
                 BackColor = System.Drawing.Color.Red,
             };
-            song3.Click += Nupp_Click3;
 
-            Label FailName = new Label();
+            Label Flamaster = new Label
+            {
+                Text = string.Format(" - Life Goes On - Oliver Tree"),
+                Location = new System.Drawing.Point(330, 185),
+                Size = new System.Drawing.Size(100, 50),
+                BackColor = System.Drawing.Color.White,
+            };
+
+            PictureBox wanish = new PictureBox
+            {
+                Image = Image.FromFile(@"..\..\22.jpg"),
+                Location = new Point(700, 200),
+                Size = new Size(300, 300),
+                SizeMode = PictureBoxSizeMode.Zoom
+            };
+
+            song3.Click += Nupp_Click3;
 
             if (song1.Enabled == true)
             {
-                FailName
-                {
-                    Text = string.Format(" - Pumped up kicks"),
-                    Location = new System.Drawing.Point(270, 110),
-                    Size = new System.Drawing.Size(100, 50),
-                    BackColor = System.Drawing.Color.White,
-                };
                 this.Controls.Add(FailName);
-                PictureBox pilt = new PictureBox
-                {
-                    Image = Image.FromFile(@"..\..\21.jpg"),
-                    Location = new Point(300, 300),
-                    Size = new Size(300, 300),
-                    SizeMode = PictureBoxSizeMode.Zoom
-                };
+                this.Controls.Add(pilt);
             }
             else if (song2.Enabled == true)
             {
-                Label FailName = new Label
-                {
-                    Text = string.Format(" - MONTERO - LIL NAS"),
-                    Location = new System.Drawing.Point(270, 185),
-                    Size = new System.Drawing.Size(100, 50),
-                    BackColor = System.Drawing.Color.White,
-                };
-                this.Controls.Add(FailName);
-                PictureBox pilt = new PictureBox
-                {
-                    Image = Image.FromFile(@"..\..\23.jpg"),
-                    Location = new Point(300, 300),
-                    Size = new Size(300, 300),
-                    SizeMode = PictureBoxSizeMode.Zoom
+                this.Controls.Add(Claster);
+                this.Controls.Add(zoomer);
 
-                };
             }
             else if (song3.Enabled == true)
             {
-                FailName
-                {
-                    Text = string.Format(" - Life Goes On - Oliver Tree"),
-                    Location = new System.Drawing.Point(270, 185),
-                    Size = new System.Drawing.Size(100, 50),
-                    BackColor = System.Drawing.Color.White,
-                };
-                this.Controls.Add(FailName);
-                PictureBox pilt = new PictureBox
-                {
-                    Image = Image.FromFile(@"..\..\22.jpg"),
-                    Location = new Point(300, 300),
-                    Size = new Size(300, 300),
-                    SizeMode = PictureBoxSizeMode.Zoom
-                };
+                this.Controls.Add(Flamaster);
+                this.Controls.Add(wanish);
+
             }
             
             
